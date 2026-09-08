@@ -1,0 +1,16 @@
+# St. George's Digital Register
+# All admin functions validate the caller's Supabase session and admin role
+# inside the Edge Function. Keep gateway JWT verification disabled so the
+# function can return its own clear 401/403 responses.
+
+[functions.admin-create-user]
+verify_jwt = false
+
+[functions.admin-update-user]
+verify_jwt = false
+
+[functions.admin-reset-user-password]
+verify_jwt = false
+
+[functions.admin-sync-stream-users]
+verify_jwt = false
